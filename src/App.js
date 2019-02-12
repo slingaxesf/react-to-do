@@ -28,21 +28,16 @@ class App extends Component {
   }
 
   toggleComplete(index) {
-    console.log(index);
     const todos = this.state.todos.slice();
     const todo = todos[index];
     todo.isCompleted = todo.isCompleted ? false : true;
     this.setState({ todos: todos });
   }
 
-
   deleteToDo(index){
-     console.log(index);
-
      const newToDos = this.state.todos.slice();
      newToDos.splice(index,1);
      this.setState({ todos: newToDos});
-     
   }
 
   render() {
